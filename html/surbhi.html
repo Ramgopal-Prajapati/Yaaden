@@ -1,0 +1,183 @@
+<!DOC<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surbhi </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style1.css">
+    <style>
+     
+      .hero-pic {
+        width: 19rem;
+        height: 19rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+    
+      
+      .hero-pic img {
+        height: 100%;
+        object-fit: cover;
+        object-position:  top -5.6rem right -0.3rem;
+        transform: scale(0.9);
+      }
+     
+    </style>
+
+
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        id="toggleTheme"
+        class="theme-btn/assets/theme_light.png"
+        alt="theme icon"
+      />
+      <div class="hero-pic">
+        <div class="inner-circle"></div>
+        <img/assets/surbhi2.jpg"
+          alt="surbhi"
+        />
+      </div>
+      <div class="hero-info">
+        <h1>Hello Ji I'm Surbhi </h1>
+      </div>
+    </section>
+    <section class="portfolio-skills">
+      <div class="btn-bg">
+        <button class="btn-2 active-btn" id="portfolio-btn">Mamories</button>
+        <button class="btn-2" id="skills-btn">About Me</button>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper project-wrapper">
+          <img src="/assets/surbhi1.jpg" alt="Project 1"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi2.jpg" alt="Project 2"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi3.jpg" alt="Project 3"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi4.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi5.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi6.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi7.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi8.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi9.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/surbhi10.jpg" alt="Project 4"
+        />
+      </div>
+      
+    </section>
+    <section class="skills" id="skills">
+      <div class="wrapper wrapperrr">
+        <h2>Ramgopal Mere Bare main kiya sochta hai</h2><br><br>
+        <article class="frontend-skills">
+          <p>Phele to main aapko sorry bolunga , because maine aapko rulaya , yaar main na hi acha dekhta huu , na hi handsum huu, ha bas padne main thik thak hu , to aapne mujhmain esa kiya deha ki aap ko main pasand aagya . kher aap bhut sunder hoo  yaar sachi , mujhe aapki Aakhe bhut he piyare lagati hai , yaar hamari friendship bhi kitni ajib thi sala bina soche samjhe kiss kerna start ker diya or fhir ...... . sachi  yaar indore ki pheli girlfriend thii aap mere , Or 15 dino main hamara breakup hoo gya , per wo din bhut ache the yaar sach main , aapke sath gumne gya or bike per enjoy kiya  bhut hi acha time thaa mere liye wo . aap ne mujhper beleive kiya or maine aapko chod diya is liye sorry. per main kiya karta yaar mere pedai distrub hone lagi thii is liye mane aapko maana kiya thaa , or fhir aap jada he seriou hoogy thee. by the way thanks for comeing in my life . and so sorry for that. Acha aapke pass mere ik mamories hai jise aap sebse sambhal ker rekhti hoo, jab bhi mere yaad aaye to , wo dekh liya kero or hamari photos bhi hai na sath wali wo dekhliya kero. </p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p><a href="">Go to the home page</a></p>
+    </footer>
+    <script>
+      // Click events for buttons
+const portfolio = document.getElementById("portfolio");
+const portfolioBtn = document.getElementById("portfolio-btn");
+const skills = document.getElementById("skills");
+const skillsBtn = document.getElementById("skills-btn");
+
+portfolioBtn.addEventListener("click", (event) => {
+  skills.style.display = "none";
+  portfolio.style.display = "flex";
+  skillsBtn.classList.remove("active-btn");
+  portfolioBtn.classList.add("active-btn");
+});
+
+skillsBtn.addEventListener("click", (event) => {
+  skills.style.display = "flex";
+  portfolio.style.display = "none";
+  portfolioBtn.classList.remove("active-btn");
+  skillsBtn.classList.add("active-btn");
+});
+
+// Light & Dark Theme
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleThemeButton = document.getElementById("toggleTheme");
+  const themeIcon = document.querySelector('img[alt="theme icon"]');
+  const githubLogo = document.querySelector('img[alt="github logo"]');
+  const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
+  const emailLogo = document.querySelector('img[alt="email logo"]');
+
+  const lightLogos = {
+    github: "assets/github_light.png",
+    linkedin: "assets/linkedin_light.png",
+    email: "assets/email_light.png",
+    theme: "assets/theme_light.png",
+  };
+
+  const darkLogos = {
+    github: "assets/github_dark.png",
+    linkedin: "assets/linkedin_dark.png",
+    email: "assets/email_dark.png",
+    theme: "assets/theme_dark.png",
+  };
+
+  function setTheme(isDark) {
+    githubLogo.src = isDark ? darkLogos.github : lightLogos.github;
+    linkedinLogo.src = isDark ? darkLogos.linkedin : lightLogos.linkedin;
+    emailLogo.src = isDark ? darkLogos.email : lightLogos.email;
+    themeIcon.src = isDark ? darkLogos.theme : lightLogos.theme;
+  }
+
+  toggleThemeButton.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-theme");
+    localStorage.setItem("isDark", isDark);
+
+    setTheme(isDark);
+  });
+
+  const loadTheme = () => {
+    const isDark = localStorage.getItem("isDark") === "true";
+    document.body.classList.toggle("dark-theme", isDark);
+
+    setTheme(isDark);
+  };
+
+  // Load saved theme from local storage or default to light theme
+  loadTheme();
+});
+
+    </script>
+  </body>
+</html>

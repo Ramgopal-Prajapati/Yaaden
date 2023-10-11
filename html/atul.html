@@ -1,0 +1,180 @@
+<!DOC<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atul Jamliya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style1.css">
+    <style>
+     
+      
+      .hero-pic {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+     
+      .hero-pic img {
+        height: 100%;
+        object-fit: cover;
+        object-position: top 2.4rem right -1.3rem;
+        transform: scale(1.9);
+      }
+      
+     
+      
+   
+      
+    </style>
+
+
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        id="toggleTheme"
+        class="theme-btn"
+        src="/assets/theme_light.png"
+        alt="theme icon"
+      />
+      <div class="hero-pic">
+        <div class="inner-circle"></div>
+        <img
+          src="/assets/atul.jpg"
+          alt="Atul Jamliya"
+        />
+      </div>
+      <div class="hero-info">
+        <h1>Atul Jamliya</h1>
+      </div>
+    </section>
+    <section class="portfolio-skills">
+      <div class="btn-bg">
+        <button class="btn-2 active-btn" id="portfolio-btn">Mamories</button>
+        <button class="btn-2" id="skills-btn">About Me</button>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper project-wrapper">
+          <img src="/assets/atul1.jpg" alt="Project 1"
+
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/atul2.jpg" alt="Project 2"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/atul3.jpg" alt="Project 3"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/atul4.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/atul5.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/atul6.jpg" alt="Project 4"
+        />
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="wrapper">
+        <h2>Ye hi Atul Mera dost</h2><br><br>
+        <article class="frontend-skills">
+          <p>Atul matalab na kuch kerta hai or na hame kerne deta hai. sala puri school life main na kese ladki ko patane diya or na khud pataya , halaki maine jo mujhe kerna thaa wo kiya , per atul ik dam shrifh ladaka hai esa sebko lagata hai , per uski asliyat main or arvin jante hai bas . Pedne mian acha hai , hamari dosti 10th class main hui thi or Polay main mera phela dost thaa atul , jise dosti itni paki hoo gye ki aaj wo mera best friend hai. Matalab polay main mera sebse acha dost atul or arvin he hai bas . Atul ki bhan main mujhe rakhi bandi hai or atul ki mummy mujhe apna beda manti hai , bhut achi hai atul ki mummy mujmain or atul main kebhi ferka nhi kerti . Or atul ik namber ka gada hai, apne bade papa se bhut derta hai , main or arvin or ishwer milker atul ki bhut tang khicte hai , or jab atul pereshan hota hai to hame bada maja aata hai . Per yaar atul hai acha ladaka , sach main dosti kese hete hia atul se pucho . Yaar pata nhi mere dosti hemesa se ache insan se hi hoti hai. Mere najar main atul acha ladaka hai , or mera acha dost bhi , Atul photographer banna chata hai i wish ki wo apna sapna pura kere . </p>
+        </article>
+      </div>
+      <div class="wrapper">
+        <h2>Ye hi Atul Mera dost</h2><br><br>
+        <article class="frontend-skills">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam sunt laudantium, culpa at ab repudiandae placeat vitae cupiditate non magni vel corporis. Facilis minus, nostrum facere laborum doloremque voluptatum minima fugit consequatur asperiores recusandae molestiae fuga enim doloribus explicabo maxime odit nulla harum autem, eveniet temporibus quisquam maiores delectus perferendis.</p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p><a href="">Go to the home page</a></p>
+    </footer>
+    <script>
+      // Click events for buttons
+const portfolio = document.getElementById("portfolio");
+const portfolioBtn = document.getElementById("portfolio-btn");
+const skills = document.getElementById("skills");
+const skillsBtn = document.getElementById("skills-btn");
+
+portfolioBtn.addEventListener("click", (event) => {
+  skills.style.display = "none";
+  portfolio.style.display = "flex";
+  skillsBtn.classList.remove("active-btn");
+  portfolioBtn.classList.add("active-btn");
+});
+
+skillsBtn.addEventListener("click", (event) => {
+  skills.style.display = "flex";
+  portfolio.style.display = "none";
+  portfolioBtn.classList.remove("active-btn");
+  skillsBtn.classList.add("active-btn");
+});
+
+// Light & Dark Theme
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleThemeButton = document.getElementById("toggleTheme");
+  const themeIcon = document.querySelector('img[alt="theme icon"]');
+  const githubLogo = document.querySelector('img[alt="github logo"]');
+  const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
+  const emailLogo = document.querySelector('img[alt="email logo"]');
+
+  const lightLogos = {
+    github: "assets/github_light.png",
+    linkedin: "assets/linkedin_light.png",
+    email: "assets/email_light.png",
+    theme: "assets/theme_light.png",
+  };
+
+  const darkLogos = {
+    github: "assets/github_dark.png",
+    linkedin: "assets/linkedin_dark.png",
+    email: "assets/email_dark.png",
+    theme: "assets/theme_dark.png",
+  };
+
+  function setTheme(isDark) {
+    githubLogo.src = isDark ? darkLogos.github : lightLogos.github;
+    linkedinLogo.src = isDark ? darkLogos.linkedin : lightLogos.linkedin;
+    emailLogo.src = isDark ? darkLogos.email : lightLogos.email;
+    themeIcon.src = isDark ? darkLogos.theme : lightLogos.theme;
+  }
+
+  toggleThemeButton.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-theme");
+    localStorage.setItem("isDark", isDark);
+
+    setTheme(isDark);
+  });
+
+  const loadTheme = () => {
+    const isDark = localStorage.getItem("isDark") === "true";
+    document.body.classList.toggle("dark-theme", isDark);
+
+    setTheme(isDark);
+  };
+
+  // Load saved theme from local storage or default to light theme
+  loadTheme();
+});
+
+    </script>
+  </body>
+</html>

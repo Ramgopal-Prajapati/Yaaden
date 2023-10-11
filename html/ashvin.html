@@ -1,0 +1,193 @@
+<!DOC<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashvin Rawal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style1.css">
+     <style>
+     
+      
+      .hero-pic {
+        width: 20rem;
+        height: 18rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+     
+      
+      .hero-pic img,
+      .wrapper img {
+        width: 100%;
+      }
+      
+      .hero-pic img {
+        height: 100%;
+        object-fit: cover;
+        object-position: top -1.6rem right 3.7rem;
+        transform: scale(1.9);
+      }
+      
+     
+    
+      
+    </style> 
+
+
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        id="toggleTheme"
+        class="theme-btn"
+        src="/assets/theme_light.png"
+        alt="theme icon"
+      />
+      <div class="hero-pic">
+        <div class="inner-circle"></div>
+        <img
+          src="/assets/a2.jpg"
+          alt="Ashvin "
+        />
+      </div>
+      <div class="hero-info">
+        <h1>Ashvin Rawal</h1>
+      </div>
+    </section>
+    <section class="portfolio-skills">
+      <div class="btn-bg">
+        <button class="btn-2 active-btn" id="portfolio-btn">Mamories</button>
+        <button class="btn-2" id="skills-btn">About Me</button>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper project-wrapper">
+          <img src="/assets/a.jpg" alt="Project 1"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a2.jpg" alt="Project 2"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a3.jpg" alt="Project 3"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a4.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a5.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a6.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a7.jpg" alt="Project 4"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/a1.jpg" alt="Project 4"
+        />
+      </div>
+      
+    </section>
+    <section class="skills" id="skills">
+      <div class="wrapper">
+        <h2>Ramgopal Mere Bare main kiya sochta hai</h2><br><br>
+        <article class="frontend-skills">
+          <p>Main ashvin ke bare main ye he sochta huu ki , ashvin ko kese se koi matalab nhi hai , kon uske bare main kiya bolta hai , koi use yaad kere ya na kere koi problem nhi . hemesha mast reheta hai, mujhe uski ye baat achi lagati hai ki wo kebhi kese per gussa nhi kerta , or hemesha sath deta hia , jab bhi college main hamari ladai hoti hai , phele ashvin hi yaad aata hai . bada he cool banda hai yaar . life main ashvin jesa friend hona jaruri hai . wese hai bada kamina because bande ne bhabhi ko fesa rekha hia , matalab dam hai. Hamare group main ashvin he esa banda hai jo kese ke baato ka bura nhi lagata . Acha hai yaar , support kerta hai , baat ko samajhta haii or bhi . overall mere liye ashvin ik acha ladaka hai .</p>
+        </article>
+      </div>
+      <div class="wrapper">
+        <h2>Main Ramgopal ke bare main kiya sochta hu</h2><br><br>
+        <article class="frontend-skills">
+          <p>pata nhi.</p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p><a href="">Go to the home page</a></p>
+    </footer>
+    <script>
+      // Click events for buttons
+const portfolio = document.getElementById("portfolio");
+const portfolioBtn = document.getElementById("portfolio-btn");
+const skills = document.getElementById("skills");
+const skillsBtn = document.getElementById("skills-btn");
+
+portfolioBtn.addEventListener("click", (event) => {
+  skills.style.display = "none";
+  portfolio.style.display = "flex";
+  skillsBtn.classList.remove("active-btn");
+  portfolioBtn.classList.add("active-btn");
+});
+
+skillsBtn.addEventListener("click", (event) => {
+  skills.style.display = "flex";
+  portfolio.style.display = "none";
+  portfolioBtn.classList.remove("active-btn");
+  skillsBtn.classList.add("active-btn");
+});
+
+// Light & Dark Theme
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleThemeButton = document.getElementById("toggleTheme");
+  const themeIcon = document.querySelector('img[alt="theme icon"]');
+  const githubLogo = document.querySelector('img[alt="github logo"]');
+  const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
+  const emailLogo = document.querySelector('img[alt="email logo"]');
+
+  const lightLogos = {
+    github: "assets/github_light.png",
+    linkedin: "assets/linkedin_light.png",
+    email: "assets/email_light.png",
+    theme: "assets/theme_light.png",
+  };
+
+  const darkLogos = {
+    github: "assets/github_dark.png",
+    linkedin: "assets/linkedin_dark.png",
+    email: "assets/email_dark.png",
+    theme: "assets/theme_dark.png",
+  };
+
+  function setTheme(isDark) {
+    githubLogo.src = isDark ? darkLogos.github : lightLogos.github;
+    linkedinLogo.src = isDark ? darkLogos.linkedin : lightLogos.linkedin;
+    emailLogo.src = isDark ? darkLogos.email : lightLogos.email;
+    themeIcon.src = isDark ? darkLogos.theme : lightLogos.theme;
+  }
+
+  toggleThemeButton.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-theme");
+    localStorage.setItem("isDark", isDark);
+
+    setTheme(isDark);
+  });
+
+  const loadTheme = () => {
+    const isDark = localStorage.getItem("isDark") === "true";
+    document.body.classList.toggle("dark-theme", isDark);
+
+    setTheme(isDark);
+  };
+
+  // Load saved theme from local storage or default to light theme
+  loadTheme();
+});
+
+    </script>
+  </body>
+</html>

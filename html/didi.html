@@ -1,0 +1,165 @@
+<!DOC<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pooja Prajapati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style1.css">
+    <style>
+     
+      .hero-pic {
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+      }
+      
+   
+      
+      .hero-pic img {
+        height: 100%;
+        object-fit: cover;
+        object-position: top -6.6rem right -0.3rem;
+        transform: scale(0.9);
+      }
+      
+      
+      
+   
+      
+    </style>
+
+
+  </head>
+  <body>
+    <section class="hero">
+      <img
+        id="toggleTheme"
+        class="theme-btn"
+        src="/assets/theme_light.png"
+        alt="theme icon"
+      />
+      <div class="hero-pic">
+        <div class="inner-circle"></div>
+        <img
+          src="/assets/didi.jpg"
+          alt="Pooja"
+        />
+      </div>
+      <div class="hero-info">
+        <h1>MySelf Pooja prajapati</h1>
+      </div>
+    </section>
+    <section class="portfolio-skills">
+      <div class="btn-bg">
+        <button class="btn-2 active-btn" id="portfolio-btn">Mamories</button>
+        <button class="btn-2" id="skills-btn">About Me</button>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="wrapper project-wrapper">
+          <img src="/assets/didi.jpg" alt="Project 1"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/ram.jpeg" alt="Project 2"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/didi.jpg" alt="Project 3"
+        />
+      </div>
+      <div class="wrapper project-wrapper">
+        <img src="/assets/ram.jpeg" alt="Project 4"
+        />
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="wrapper wrapperrr">
+        <h2>Dear pooja DIDI</h2><br><br>
+        <article class="frontend-skills">
+          <p>Pooja didi aap mere liye hemesa sebse piyare hoon or hemesa rehoge . Main aapka chota bhai bhut pagal huuu. Didi pata hai jab ham log sath main rehete the na to ham masti kerte thee , or mummy ko pereshankerte thee , didi sach main aapki yaad aati hai bhut kebhi kebhi to rona bhi aata hai, mere or aapki photo bhi nhi hai mere pass even aapki ik bhoto bhi nhi hai onlye ye ik hi hai bas . Per did sach main aap bhut ache thee , miss you didi. Mere piyare sister ji aap or main bachpan main jitna time bhi sath main thee hemesa ladte rehete thee or bhut masti kerte thee, per aap celegye so sad. Pata hai didi aapke bad mujhe koi piyar se gale nhi lagata or koi nhi puchta ki bhahi kese dundega . pata hai didi jab aapne apna hath kata thaa na muje laga tha ki aap mujhe chodker chelejaoge , didi sach main aap bhut ache thee, sorry didi maine aapko vachpan main bhut tang keeerta thaa na i am really sorry. Per didi aapki jagha koi nhi le sakta aap mere liye hemesha sebse piyare rehogi , "I love you DIDI" wese maine aapka naam bhi rekha thaa na buphelo , because aap thodi moti htee, aap bhu chedte the na ik naam ko leker . yaar didi maine jo aapke liye bhabhi dekhi thi wo to mere nhi hoosakti , please kuch esa kero ki rokhmaji aapki bhabhi ban jaye . Didi aap mujhe yaad ketri hoo ya nhi , i miss you didi ji , sorry baphelo . Wese didi aapke sath bhut bura hua na main janta huu, per main aapko hemesa apriciate kerta huu didi ki aapmain itni sansakti hai, didi please jisne bhi aapke sath galat kiya hai use kebhi maff mat kerna . wese didi ji aap bhut cute thee sach main , aapka face kitna gol matol thaa yaar , i like it . so sweet didi aap bhut ache thee, pata hai ager aap abhi tak hote na to ham rooj selfy lete or status or story lagate . didi pata hai jab bimar hota huu to koi nhi puchta tabiyat kese hai , koi aapki trha piyaar nhi kerta , koi apki trha mujhee nhi solata , koi aapki trha mere head main hath nhi marta , koi mujhe aapki trha piyar kerta soch main didi ji aap bhut ache thee , so sorry didi. </p>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <p><a href="">Go to the home page</a></p>
+    </footer>
+    <script>
+      // Click events for buttons
+const portfolio = document.getElementById("portfolio");
+const portfolioBtn = document.getElementById("portfolio-btn");
+const skills = document.getElementById("skills");
+const skillsBtn = document.getElementById("skills-btn");
+
+portfolioBtn.addEventListener("click", (event) => {
+  skills.style.display = "none";
+  portfolio.style.display = "flex";
+  skillsBtn.classList.remove("active-btn");
+  portfolioBtn.classList.add("active-btn");
+});
+
+skillsBtn.addEventListener("click", (event) => {
+  skills.style.display = "flex";
+  portfolio.style.display = "none";
+  portfolioBtn.classList.remove("active-btn");
+  skillsBtn.classList.add("active-btn");
+});
+
+// Light & Dark Theme
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleThemeButton = document.getElementById("toggleTheme");
+  const themeIcon = document.querySelector('img[alt="theme icon"]');
+  const githubLogo = document.querySelector('img[alt="github logo"]');
+  const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
+  const emailLogo = document.querySelector('img[alt="email logo"]');
+
+  const lightLogos = {
+    github: "assets/github_light.png",
+    linkedin: "assets/linkedin_light.png",
+    email: "assets/email_light.png",
+    theme: "assets/theme_light.png",
+  };
+
+  const darkLogos = {
+    github: "assets/github_dark.png",
+    linkedin: "assets/linkedin_dark.png",
+    email: "assets/email_dark.png",
+    theme: "assets/theme_dark.png",
+  };
+
+  function setTheme(isDark) {
+    githubLogo.src = isDark ? darkLogos.github : lightLogos.github;
+    linkedinLogo.src = isDark ? darkLogos.linkedin : lightLogos.linkedin;
+    emailLogo.src = isDark ? darkLogos.email : lightLogos.email;
+    themeIcon.src = isDark ? darkLogos.theme : lightLogos.theme;
+  }
+
+  toggleThemeButton.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-theme");
+    localStorage.setItem("isDark", isDark);
+
+    setTheme(isDark);
+  });
+
+  const loadTheme = () => {
+    const isDark = localStorage.getItem("isDark") === "true";
+    document.body.classList.toggle("dark-theme", isDark);
+
+    setTheme(isDark);
+  };
+
+  // Load saved theme from local storage or default to light theme
+  loadTheme();
+});
+
+    </script>
+  </body>
+</html>
